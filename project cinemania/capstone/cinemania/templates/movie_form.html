@@ -1,0 +1,35 @@
+{% load static %}
+<html>
+    <title>movie form</title>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'mstyles.css' %}"></link>
+    </head>
+    <body>
+    		<div class="container">
+    			<form action="{% url 'upload' %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+    				<h2>Cinemania Uploading Form</h2>
+                    
+                    <input type="text" placeholder="Movie title" name="title">
+                    <input type="date" placeholder="" name="month">
+                    <input type="text" placeholder="main actors" name="actors">
+  					<input type="textarea" name="description" placeholder="type your movie description"> 
+  					<input type="file" name="posters" placeholder="poster">
+  					<div class ="genre" >
+						<select id="genre" class="genre" name="genre">
+							<option value="">Choose genre</option>
+  							<option value="Romantic">Romantic</option>
+  							<option value="Comedy">Comedy</option>
+  							<option value="Cartoon">Cartoon</option>
+  							<option value="Action">Actions</option>
+						</select>
+					</div>
+					<div  class = "button" id = "button">
+					<input type="submit" name="btnsubmit" value="upload" id="bt-upload" >
+          <input type="clear" name="btn-clear" value="clear" id="bt-clear">
+					</div>
+
+       			</form>
+       		</div>
+    </body>
+</html>    

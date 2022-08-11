@@ -1,0 +1,300 @@
+  {% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Welcome</title>
+
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+		*{
+			margin: 0;
+			padding: 0;
+		scroll-behavior: smooth;
+		font-family: "Poppins" , sans-serif;
+		}
+		.container{
+			background-color: whitesmoke;
+			width: 100%;
+			justify-content: center;
+			align-items: center;
+
+
+		}
+		.header{
+			/*height: 12vh;*/
+			height: auto;
+			background-color: whitesmoke;
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			position: sticky;
+			top: 0;
+		}
+		.header h1{
+			color: darkred;
+			font-size: 40px;
+			padding-top: 10px;
+			margin-left: 12px;
+			cursor: pointer;
+			width: 35%;
+
+		}
+		.nav{
+			float: right;
+			width: 50%;
+			text-align: center;
+		}
+		.nav ul{
+			display:flex;
+			padding-top: 12px;
+			list-style: none;
+		}
+		.nav ul li a{
+			text-decoration: none;
+			padding-right: 18px;
+			color: black;
+			font-size: 20px;
+			margin-right: 35px;
+		}
+		.nav ul li a:hover{
+			color: darkred;
+		}
+		.content{
+			/*position:relative ;*/
+			/*height: 80vh;*/
+			height: auto;
+			background-color: lightslategray;
+			background:linear-gradient(163deg, rgba(2,0,36,1) 0%, rgba(0,0,0,0.6430147058823529) 0%),url('{% static 'image/full1.jpg' %}');
+			background-attachment: fixed;
+			color: white;
+		}
+		.texte{
+			margin-left: 20%;
+			padding-top: 7%;
+		}
+		.texte span{
+			font-size: 20px;
+			font-family: sans-serif;
+
+		}
+		.texte h1{
+			font-size: 55px;
+			font-weight: 1200;
+			color: darkred;
+			padding: 10px;
+		}
+		.join{
+			padding: 20px;
+			padding-bottom: 7%;
+
+
+		}
+		.join a{
+			text-decoration: none;
+			color: black;
+			border-top: 1px solid whitesmoke;
+			border-bottom: 1px solid whitesmoke;
+			border-radius:20px;
+			padding: 10px;
+			background-color: whitesmoke;
+		}
+		.terms{
+			background-color: whitesmoke;
+			text-align: center;
+			width: 70%;
+			margin-left:15% ;
+			padding: 15px;
+			margin-top: 5%;
+		}
+		.terms span{
+			font-style: oblique;
+		}
+		.contactus{
+			position:relative ;
+			/*height: 80vh;*/
+			height: auto;
+			background-color: lightslategray;
+			background:linear-gradient(163deg, rgba(2,0,36,1) 0%, rgba(0,0,0,0.7430147058823529) 0%),url('{% static 'image/scifi7.jpg'%}')no-repeat;
+			background-attachment: fixed;
+			color: white;
+		}
+		.formu{
+			padding-top: 16px;
+			margin-left: 30%;
+			height: auto;
+		}
+		.formu span{
+			font-size: 35px;
+			font-weight: bolder;
+			color: darkred;
+		}
+		.formu label{
+			font-size: px;
+			font-weight: bold;
+			padding: 10px;
+		}
+		.formu input{
+			width: 350px;
+			height: 40px;
+			margin-top: 10px;
+			margin-bottom: 10px;position:relative ;
+			border-radius: 5px;
+			outline-color: white;
+			border:none ;
+			padding-left: 10px;
+		}
+		.formu input[type=submit]{
+			width: 200px;
+			text-align: center;
+			background-color: darkred;
+			outline: none;
+			border: none;
+			border-radius: 15px;
+			color: white;
+			font-weight: bolder;
+		}
+		.formu textarea{
+			height: 200px;
+			width: 500px;
+			margin-top: 10px;
+			border: none;
+			outline: none;
+			border-radius: 5px;
+			padding: 10px;
+		}
+		.copyright{
+			width: 100%;
+			text-align: center;
+			background-color: black;
+			margin-top: 20px;
+		}
+		.copyright span{
+			font-size: 15px;
+			color: whitesmoke;
+			padding: 15px;
+			font-style: oblique;
+		}
+		/*cards*/
+		.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+.card{
+	border-radius: 15px;
+}
+.card p{
+	font-size: 18px;
+}
+</style>
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h1>Cinemania</h1>
+			<div class="nav">
+				<ul>
+				<li><a href="#join">Join Community</a></li>
+				<li><a href="#team">Devs Team</a></li>
+				<li><a href="#contact">Contact Us</a></li>
+			</ul>
+			</div>
+		</div>
+		<div class="content" id="join">
+			<div class="texte">
+				<span>
+			Welcome To Cinemania	
+			</span>
+			<h1>Community of Cinema <br> Enthusiasts.</h1>
+			<span>Become part of huge Community today</span>
+			<div class="join">
+				<a href="{% url 'index' %}">Join Community</a>
+			</div>
+			</div>
+			
+		</div>
+		<div class="dev" >
+
+		<div id="team" class="team" style="display: flex; margin: 5%;border: 2px solid black; padding: 10px; border-radius: 20px;">
+			<p style="text-align: center; writing-mode: vertical-rl; font-size: 25px;text-orientation: upright; font-family: fantasy;">Team Underscores</p>
+<div class="card">
+  <img src="../static/jonas.png" alt="Jonas" style="width:100%">
+  <h3>Jonas IRASUBIZA</h3>
+  <p class="title">Frontend Developer, IT</p>
+  <p>University of Rwanda</p>
+  <p><button>220011085</button></p>
+</div>
+<div class="card">
+  <img src="../static/bh.png" alt="Thierry" style="width:100%">
+  <h3>Thierry BAHANDA</h3>
+  <p class="title">Backend Developer,IT</p>
+  <p>University of Rwanda</p>
+  <p><button>220011085</button></p>
+</div>
+<p style="text-align: center; writing-mode: vertical-rl; font-size: 25px;text-orientation: upright; font-family: fantasy;float: right;">Team Underscores</p>
+</div>
+		</div>
+		<div class="contactus" id="contact">
+			<form class="formu" action="{% url 'welcome' %}" method="POST" enctype="multipart/form-data">
+				{% csrf_token %}
+				<span>Get in-Touch With Support Team</span><br>
+				<label>Names</label><br>
+				<input type="text" name="names" placeholder="Enter Your First and Last name"><br>
+				<label>Email Address</label><br>
+				<input type="email" name="email" placeholder="Enter Your Email"><br>
+				<label>Suggestion</label><br>
+				<textarea name="msg" placeholder="Message/Suggestion/Ask Questions"></textarea><br>
+				<input type="Submit" name="submit" value="Send">
+			</form>
+		</div>
+		<div class="terms" id="terms">
+			<h3>Terms and Conditions</h3>
+			<br>
+			<span>
+				Post content that is unlawful, malicious, misleading, defamatory, harmful, threatening, abusive, harassing, vulgar, obscene, libelous, objectionable, inappropriate, improper, invasive of another's privacy, hateful, or racially, ethnically, or otherwise objectionable.
+				<br>
+				<br>
+				Impersonate any person or entity, including, but not limited to, Cinemania or falsely state or otherwise misrepresent your affiliation with any person, group, or entity.
+			</span>
+			<br>
+			<input type="checkbox" name=""> Accept Terms and Conditions
+		</div>
+		<div class="copyright">
+			<span>All Right Reserved by BH & Jallah Who Owns Underscores &copy 2022</span>
+		</div>
+	</div>
+</body>
+</html>

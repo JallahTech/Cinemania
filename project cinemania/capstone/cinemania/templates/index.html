@@ -1,0 +1,613 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Cinemania</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Tangerine">
+	<link rel="stylesheet" type="text/css" href="index.class">
+	<style type="text/css">
+
+		*{
+			scroll-behavior: smooth;
+		}
+		a{
+			text-decoration: none;
+			color: black;
+		}
+		.carousel{
+			height: 32rem;
+		}
+		.carousel-inner{
+			height: 32rem;
+			width: 100%;
+
+		}
+		.carousel-caption{
+			text-align: bottom;
+			align-self: center;
+			height: 100%;
+			width: 110%;
+			margin-left: -15%;
+	   background: rgb(2,0,36);
+      background: linear-gradient(163deg, rgba(2,0,36,1) 0%, rgba(0,0,0,0.37298669467787116) 0%);
+		}
+		.texte{
+			position: absolute;
+			top: 40%;
+			left: 23%;
+			width: 50%;
+		}
+		.texte h5{
+			font-size: 35px;
+			font-weight: bold;
+		}
+		h5{
+			color:white;
+			font-weight: bolder;
+		}
+	/*	.texte p{
+			font-family: serif;
+  			font-size: 20px;
+		}*/
+		.caption-genre{
+			border: 2px solid black;
+			box-shadow: 5px 5px 10px black;
+			width: 40%;
+			text-align: center;
+			background: whitesmoke;
+			margin: 15px 0 15px 0;
+			margin-left: 8%;
+			font-family: 'Tangerine', serif;
+  			font-size: 100px;
+  			font-weight: bold;
+  			text-shadow: 5px 5px 10px #000;
+  			border-radius: 0 25px 0 25px;
+		}
+    .container{
+      width: 180%
+      background-color:red;
+    }
+		.card{
+			border: 1px solid black;
+		}
+		.imaje{
+			margin-top: -10px;
+			height: 40px;
+			width: 40px;
+			border-radius: 50%;
+		}
+		.card-body{
+			background-color: #04aa6d;
+		}
+		.card-body h5{
+			color: black;
+			font-weight: bolder;
+		}
+		.navbar-brand h1{
+			color: lightseagreen;
+			font-weight: bolder;
+			outline: black;
+		}
+		.nav-item:hover{
+			color: lightseagreen;
+		}
+		.copyright{
+      clear: both;
+			width: 100%;
+			text-align: center;
+			background-color: black;
+			margin-top: 20px;
+		}
+		.copyright span{
+			font-size: 15px;
+			color: whitesmoke;
+			padding: 15px;
+			font-style: oblique;
+		}
+		.dropdown-menu{
+			margin-top: -50px;
+		}
+
+		body {
+  background-color: white;
+  color: black;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+.recent{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 90%;
+  margin-left: 5%;
+}
+
+
+/*hereeeeeeeeeeeeeeeeeeeeee*/
+
+
+
+.container1 {
+    display: flex;
+    background: url('{% static "image/download.jpeg" %}');
+   /* height: 35vh;*/
+   height: auto;
+    width: 100%;
+    color: white;
+    /*margin-left: 2%;*/
+    margin-top: 3%;
+      border-radius: 15px;
+
+}
+/*.image{
+    height:35vh ;
+
+  }*/
+  .description{
+    width: 60%;
+  }
+  .title span{
+    font-size: 30px;
+    padding: 7px;
+    font-weight: bolder;
+  }
+  .details{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    width: 80%;
+  }
+  .details span{
+    font-size: 20px;
+    font-weight: bold;
+    color: darkred;
+  }
+  .cards{
+    border-right: 5px solid grey;
+    padding-right: 5px;
+  }
+  .extra{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .movie{
+    width: 45%;
+  }
+  .movie span{
+    font-size: 20px;
+    font-weight: bold;
+    color: darkred;
+  }
+
+ /* hereeeeeeeeeeeeee*/
+ .prepost{
+  margin-left: -5%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+ }
+</style>
+</head>
+<body>
+
+
+<!-- Navigation Bar -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div id="home" class="container-fluid">
+  	 <a class="navbar-brand px-1" href="#">
+      <!-- <img src="./image/logo.png" alt="" width="120" height="24" class="d-inline-block align-text-top"> -->
+      <h1>Cinemania</h1>
+    </a>
+    <!-- <a class="navbar-brand" href="#">Cinemania</a> -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#recently">Home</a>
+        </li>
+          <li class="nav-item px-2 dropdown">
+    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Genre</a>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#Action">Action</a></li>
+      <li><a class="dropdown-item" href="#romance">Romance</a></li>
+      <li><a class="dropdown-item" href="#scifi">Sci-fi</a></li>
+      <li><a class="dropdown-item" href="#comedy">Comedy</a></li>
+      <li><a class="dropdown-item" href="#animated">Animated</a></li>
+    </ul>
+  </li>
+    <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'upload'%}">upload</a>
+        </li>
+      <li class="nav-item px-2 dropdown">
+    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><img src="{{ request.user.signup.profile_image.url }}" class="imaje"></a>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">{{ user.first_name }} {{ user.last_name }}</a></li>
+      <li><hr></li>
+      <li><a class="dropdown-item" href="#"><button onclick="myFunction()">Toggle dark mode</button></a></li>
+      <li><a class="dropdown-item" href="{% url 'logout' %}">Log Out</a></li>
+      <li><hr></li>
+    </ul>
+  </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<!-- End of Navigation Bar -->
+
+<!-- Image Slider -->
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'image/the-boss-baby-family-business-BB2_Tsr1Sheet10_RGB_2_rgb-copy.jpg' %}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+      	<div class="texte">
+      	<h5>The Boss Baby 2: Family Business</h5>
+        <p>In the sequel to DreamWorks Animation's Oscar®-nominated blockbuster comedy, the Templeton brothers--Tim (James Marsden, X-Men franchise) and his Boss Baby little bro Ted (Alec Baldwin)--have become adults and drifted away from each other. Tim is now a married stay-at-home dad. Ted is a hedge fund CEO. But a new boss baby with a cutting-edge approach and a can-do attitude is about to bring them together again.. and inspire a new family business.—DreamWorks</p>
+      	</div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="{% static 'image/scifi7.jpg' %}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+      	<div class="texte">
+      	<h5>Thor:Love and Thunder</h5>
+        <p>Thor embarks on a journey unlike anything he's ever faced -- a quest for inner peace. However, his retirement gets interrupted by Gorr the God Butcher, a galactic killer who seeks the extinction of the gods. To combat the threat, Thor enlists the help of King Valkyrie, Korg and ex-girlfriend Jane Foster, who -- to his surprise -- inexplicably wields his magical hammer. Together, they set out on a harrowing cosmic adventure to uncover the mystery of the God Butcher's vengeance.</p>
+      	</div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'image/715741.jpg' %}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+      	<div class="texte">
+      	<h5>The Avengers</h5>
+        <p>When Thor's evil brother, Loki (Tom Hiddleston), gains access to the unlimited power of the energy cube called the Tesseract, Nick Fury (Samuel L. Jackson), director of S.H.I.E.L.D., initiates a superhero recruitment effort to defeat the unprecedented threat to Earth. Joining Fury's "dream team" are Iron Man (Robert Downey Jr.), Captain America (Chris Evans), the Hulk (Mark Ruffalo), Thor (Chris Hemsworth), the Black Widow (Scarlett Johansson) and Hawkeye (Jeremy Renner).</p>
+      	</div>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<!-- End Image Slider -->
+
+<div id="Action" class="caption-genre">
+<a href="#home">
+	<h1>Action</h1>
+</a>	
+</div>
+<div class="prepost">
+<div class="container">
+        <div class="row g-3">
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card">
+                    <img src="{% static 'image/action/No-Time-To-Die-2020.jpg.jpg' %}" class="card-img-top" alt="New York">
+                    <div class="card-body">
+                        <h5 class="card-title">No Time To Die(2022)</h5>
+                        <span class="card-text"> In rhoncus libero magna, ultricies condimentum</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card">
+                    <img src="{% static 'image/action/action7.jpg' %}" class="card-img-top" alt="New York">
+                    <div class="card-body">
+                        <h5 class="card-title">Hobs & Show(2021)</h5>
+                       <span class="card-text"> In rhoncus libero magna, ultricies condimentum tortor.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card">
+                    <img src="{% static 'image/action/action3.jpg' %}" class="card-img-top" alt="New York">
+                    <div class="card-body">
+                        <h5 class="card-title">True Legend(2003)</h5>
+                       <span class="card-text"> In rhoncus libero magna, ultricies condimentum tortor tempor sit amet.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card">
+                    <img src="{% static 'image/action/action12.png' %}" class="card-img-top" alt="New York">
+                    <div class="card-body">
+                        <h5 class="card-title">Venom(2018)</h5>
+                       <span class="card-text"> In rhoncus libero magna, ultricies condimentum tortor tempor sit amet.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- crds2 -->
+
+<div id="animated" class="caption-genre">
+	<a href="#home">
+	<h1>Animated</h1>
+</a>
+</div>
+
+<div class="container">
+        <div class="row g-3">
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card">
+                    <img src="{% static 'image/animated/croods.jpg' %}" class="card-img-top" alt="New York">
+                    <div class="card-body">
+                        <h5 class="card-title">Croods(2018)</h5>
+                        <span class="card-text"> In rhoncus libero magna, ultricies condimentum tortor tempor sit amet.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card">
+                    <img src="{% static 'image/animated/your-name.jpg' %}" class="card-img-top" alt="New York">
+                    <div class="card-body">
+                        <h5 class="card-title">Your Name(2016)</h5>
+                       <span class="card-text"> In rhoncus libero magna, ultricies In rhoncus libero magna, ultricies condimentum tortor tempor sit amet.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card">
+                    <img src="{% static 'image/animated/coco.jpg' %}" class="card-img-top" alt="New York">
+                    <div class="card-body">
+                        <h5 class="card-title">Coco(2018)</h5>
+                       <span class="card-text"> In rhoncus libero magna, ultricies condimentum tortor tempor sit amet.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card">
+                    <img src="{% static 'image/animated/over-the-moon.jpg' %}" class="card-img-top" alt="New York">
+                    <div class="card-body">
+                        <h5 class="card-title">Over-The-Moon(2021)</h5>
+                        <span class="card-text"> In rhoncus libero magna, ultricies condimentum tortor tempor sit amet.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div id="comedy" class="caption-genre">
+	<a href="#home">
+	<h1>Comedy</h1>
+</a>
+</div>
+
+<div class="container">
+        <div class="row g-3">
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card">
+                    <img src="{% static 'image/comedy/comedy2.jpg' %}" class="card-img-top" alt="New York">
+                    <div class="card-body">
+                        <h5 class="card-title">Charlie Chaplin(1940)</h5>
+                        <span class="card-text"> In rhoncus libero magna, ultricies condimentum tortor tempor sit amet.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card">
+                    <img src="{% static 'image/comedy/comedy7.jpg' %}" class="card-img-top" alt="New York">
+                    <div class="card-body">
+                        <h5 class="card-title">Role Models(2022)</h5>
+                       <span class="card-text"> In rhoncus libero magna, ultricies condimentum tortor tempor sit amet.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card">
+                    <img src="{% static 'image/comedy/comedy3.jpg' %}" class="card-img-top" alt="New York">
+                    <div class="card-body">
+                        <h5 class="card-title">Brides Maides(2011)</h5>
+                       <span class="card-text"> In rhoncus libero magna, ultricies condimentum tortor tempor sit amet.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card">
+                    <img src="{% static 'image/comedy/comedy5.jpg' %}" class="card-img-top" alt="New York">
+                    <div class="card-body">
+                        <h5 class="card-title">Irresponsible(2019)</h5>
+                       <span class="card-text"> In rhoncus libero magna, ultricies condimentum tortor tempor sit amet.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<div id="romance" class="caption-genre">
+	<a href="#home">
+	<h1>Romance</h1>
+</a>
+</div>
+
+<div class="container">
+        <div class="row g-3">
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card">
+                    <img src="{% static 'image/romance/Romance5.jpg' %}" class="card-img-top" alt="New York">
+                    <div class="card-body">
+                        <h5 class="card-title">If Only(2015)</h5>
+                        <span class="card-text"> In rhoncus libero magna, ultricies condimentum tortor tempor sit amet.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card">
+                    <img src="{% static 'image/romance/Romance2.jpg' %}" class="card-img-top" alt="New York">
+                    <div class="card-body">
+                        <h5 class="card-title">Song One(2022)</h5>
+                       <span class="card-text"> In rhoncus libero magna, ultricies condimentum tortor tempor sit amet.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card">
+                    <img src="{% static 'image/romance/Romance3.jpg' %}" class="card-img-top" alt="New York">
+                    <div class="card-body">
+                        <h5 class="card-title">After We Collided(2021)</h5>
+                       <span class="card-text"> In rhoncus libero magna, ultricies condimentum tortor tempor sit amet.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card">
+                    <img src="{% static 'image/romance/Romance4.jpg' %}" class="card-img-top" alt="New York">
+                    <div class="card-body">
+                        <h5 class="card-title">Me Before You(2017)</h5>
+                       <span class="card-text"> In rhoncus libero magna, ultricies condimentum tortor tempor sit amet.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div id="scifi" class="caption-genre">
+	<a href="#home">
+	<h1>Sci-Fi</h1>
+</a>
+</div>
+
+<div class="container">
+        <div class="row g-3">
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card">
+                    <img src="{% static 'image/scifi/end-game.jpg' %}" class="card-img-top" alt="New York">
+                    <div class="card-body">
+                        <h5 class="card-title">End-Game(2020)</h5>
+                       <span class="card-text"> In rhoncus libero magna, ultricies condimentum tortor tempor sit amet.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card">
+                    <img src="{% static 'image/scifi/transformer.jpg' %}" class="card-img-top" alt="New York">
+                    <div class="card-body">
+                        <h5 class="card-title">Transformers(2018)</h5>
+                       <span class="card-text"> In rhoncus libero magna, ultricies condimentum tortor tempor sit amet.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card">
+                    <img src="{% static 'image/scifi/captain-marvel.png' %}" class="card-img-top" alt="New York">
+                    <div class="card-body">
+                        <h5 class="card-title">Captain-Marvel.(2021)</h5>
+                        <span class="card-text"> In rhoncus libero magna, ultricies condimentum tortor tempor sit amet.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card">
+                    <img src="{% static 'image/scifi/bat-man.jpg' %}" class="card-img-top" alt="New York">
+                    <div class="card-body">
+                        <h5 class="card-title">Bat-Man(2016)</h5>
+                        <span class="card-text"> In rhoncus libero magna, ultricies condimentum tortor tempor sit amet.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="recent">
+      <div id="recently" style="width: 60%;margin-left: 20%">
+      <span  style="background-color: darkgrey; width: 100%;padding: 5px;margin-top: 2%;margin-left: -49%;font-size:35px; font-weight: bold;">Recently Posted</span>
+      </div>
+      {% for mov in movies %}
+    <div class="container1">
+      <div class="image" style="height: auto; width: 30%;
+          background: url('{{mov.movie_poster.url}}'); background-repeat: no-repeat; background-position:center;margin-right: 20px">
+          <img src="">
+      </div>
+
+      <div class="description">
+        <div class="title">
+          <span>
+        <!-- Kevin Hart: Laugh at My Pain (2011) -->
+           {{mov.title}}
+          </span>
+        </div>
+        <hr>
+      <div class="details">
+        <div class="cards"><span>Genre:</span> {{mov.movie_genre}}
+        </div>
+        <div class="cards"><span>Release date:</span> {{mov.movie_date}}
+        </div>
+        <div class="cards"><span>Uploaded by:</span>{{mov.owner}}
+        </div>
+      </div>
+        <hr>
+      <div class="extra">
+        <div class="movie"><span><u>Description</u></span><br>{{mov.description}}
+        </div>
+        <div class="movie"><span><u>Main Actors</u></span><br>{{mov.movie_actors}}
+        </div>
+      </div>
+
+      </div>
+      
+    </div>
+    {% endfor %}
+  </div>
+<div class="copyright">
+	<span>All Right Reserved by BH & Jallah Who Owns Underscores &copy 2022</span>
+</div>
+
+</div>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+	
+</script>
+<script type="text/javascript">
+	function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script>
+</body>
+</html>
+
+
